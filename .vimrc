@@ -24,8 +24,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'taglist.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Townk/vim-autoclose'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'jonathanfilip/vim-lucius'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 call vundle#end()
 
@@ -43,6 +43,7 @@ let g:NumberToggleTrigger="<F10>"
 map <C-n> :NERDTreeToggle<CR>
 map <F8> :TagbarToggle <CR>
 map <F9> :FixWhitespace <CR>
+map <F11> gg=G
 
 nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
 
@@ -65,4 +66,4 @@ set softtabstop=4
 set expandtab
 
 colorscheme lucius
-LuciusDarkHighContrast
+LuciusLight
