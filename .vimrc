@@ -4,6 +4,7 @@ filetype off
     set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+    Plugin 'sheerun/vim-polyglot'
     Plugin 'gmarik/Vundle.vim'
     Plugin 'wting/rust.vim'
     Plugin 'nono/jquery.vim'
@@ -39,8 +40,16 @@ call vundle#end()
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
-    let g:cpp_class_scope_highlight = 1
+"    let g:cpp_class_scope_highlight = 1
     let g:NumberToggleTrigger="<F10>"
+
+    let g:tagbar_type_make = {
+        \ 'kinds':[
+            \ 'm:macros',
+            \ 't:targets'
+        \ ]
+    \}
+
 
     map <C-n> :NERDTreeToggle<CR>
     map <F8> :TagbarToggle <CR>
@@ -67,4 +76,4 @@ call vundle#end()
     set number
 
     colorscheme lucius
-    LuciusLight
+    LuciusLightHighContrast
