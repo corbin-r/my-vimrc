@@ -1,11 +1,11 @@
 set nocompatible
-filetype off
+filetype off   
+syntax on
 
-    set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-    Plugin 'sheerun/vim-polyglot'
     Plugin 'gmarik/Vundle.vim'
+    Plugin 'sheerun/vim-polyglot'
     Plugin 'wting/rust.vim'
     Plugin 'nono/jquery.vim'
     Plugin 'lepture/vim-css'
@@ -20,15 +20,15 @@ call vundle#begin()
     Plugin 'tpope/vim-surround'
     Plugin 'tpope/vim-commentary'
     Plugin 'tpope/vim-haml'
-    Plugin 'bling/vim-airline'
     Plugin 'pangloss/vim-javascript'
     Plugin 'taglist.vim'
     Plugin 'bronson/vim-trailing-whitespace'
     Plugin 'Townk/vim-autoclose'
-    Plugin 'jonathanfilip/vim-lucius'
     Plugin 'jeffkreeftmeijer/vim-numbertoggle'
     Plugin 'Shougo/vimshell.vim'
     Plugin 'klen/python-mode'
+	
+    Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call vundle#end()
 
@@ -40,7 +40,7 @@ call vundle#end()
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
-"    let g:cpp_class_scope_highlight = 1
+"   let g:cpp_class_scope_highlight = 1
     let g:NumberToggleTrigger="<F10>"
 
     let g:tagbar_type_make = {
@@ -63,17 +63,13 @@ call vundle#end()
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     autocmd vimenter * NERDTree
 
-    syntax on
-    set hidden
-    set wildmenu
-    set backspace=indent,eol,start
-    set autoindent
-    set shiftwidth=4
-    set softtabstop=4
-    set expandtab
+set hidden
+set wildmenu
+set backspace=indent,eol,start
+set autoindent
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 
-    set relativenumber
-    set number
-
-    colorscheme lucius
-    LuciusLightHighContrast
+set relativenumber
+set number
