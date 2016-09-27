@@ -1,5 +1,5 @@
 set nocompatible
-filetype off   
+filetype off
 syntax on
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -21,13 +21,12 @@ call vundle#begin()
     Plugin 'tpope/vim-commentary'
     Plugin 'tpope/vim-haml'
     Plugin 'pangloss/vim-javascript'
-    Plugin 'taglist.vim'
     Plugin 'bronson/vim-trailing-whitespace'
     Plugin 'Townk/vim-autoclose'
     Plugin 'jeffkreeftmeijer/vim-numbertoggle'
     Plugin 'Shougo/vimshell.vim'
     Plugin 'klen/python-mode'
-	
+
     Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call vundle#end()
@@ -40,36 +39,38 @@ call vundle#end()
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
-"   let g:cpp_class_scope_highlight = 1
     let g:NumberToggleTrigger="<F10>"
 
     let g:tagbar_type_make = {
-        \ 'kinds':[
+        \ 'kinds': [
             \ 'm:macros',
-            \ 't:targets'
+    	    \ 't:targets'
         \ ]
-    \}
+    \ }
+
 
 
     map <C-n> :NERDTreeToggle<CR>
-    map <F8> :TagbarToggle <CR>
-    map <F9> :FixWhitespace <CR>
-    map <F11> gg=G <CR>
-    map <F7> :lopen <CR>
-    map <F6> :lclose <CR>
+    map <F8> :TagbarToggle<CR>
+    map <F9> :FixWhitespace<CR>
+    map <F11> gg=G<CR>
+    map <F7> :lopen<CR>
+    map <F6> :lclose<CR>
 
     nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
 
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     autocmd vimenter * NERDTree
 
-set hidden
-set wildmenu
-set backspace=indent,eol,start
-set autoindent
-set shiftwidth=4
-set softtabstop=4
-set expandtab
+    set hidden
+    set wildmenu
+    set backspace=indent,eol,start
+    set autoindent
+    set shiftwidth=4
+    set softtabstop=4
+    set expandtab
 
-set relativenumber
-set number
+    set relativenumber
+    set number
+
+    set guifont=Hack:h12
